@@ -1,0 +1,21 @@
+<nav class="navbar navbar-default col-md-offset-2 col-md-8" style="margin-top:8px; background-color: white; border-top-left-radius:0px; border-top-right-radius:0px;">
+  <table class="table table-striped" style="margin-top:20px;">
+    <tr>
+      <th><label>Room Name</label></th>
+      <th><label>Room Class</label></th>
+      <th><label>Price</label></th>
+      <th><label>Status</label></th>
+      <th><label></label></th>
+    </tr>
+    <tr *ngFor="let x of data.roomList">
+      <td>{{ x.room_name }}</td>
+      <td>{{ x.room_class }}</td>
+      <td>{{ x.price }}</td>
+      <td>{{ x.status }}</td>
+      <td>
+        <button class="btn btn-default" type="button" (click)="add(x.$key)"> 
+        <span class="glyphicon glyphicon-trash"></span>  Booked</button>
+      </td>
+    </tr>
+  </table>
+</nav>
